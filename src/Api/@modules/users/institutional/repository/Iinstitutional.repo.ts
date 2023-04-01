@@ -1,0 +1,8 @@
+import { Iinstitutional } from '../../institutional/entity/Iinstitutional'
+export interface institutionalRepository {
+    create(name: string, surname: string, email: string, image: string, phone: string, password: string, dateOfBirth: string, gender: string, basket: string, order: string, creditCardName: string, creditCardSurname: string, creditCardNumber: string, creditCardCvv: string, city: string, country: string, address: string, zipCode: string, expireMonth: string, expireYear: string,  companyName: string, position: string, activityField: string, businessType: string, taxOffice: string, identity: number, companyAddress: string, district: string, service: string): Promise<{ message: string }>
+    find(id: string): Promise<Iinstitutional>
+    findAll(): Promise<Iinstitutional[]>
+    update(id: string, name: string, surname: string, email: string, image: string, phone: string, password: string, dateOfBirth: string, gender: string, basket: string, order: string, creditCardName: string, creditCardSurname: string, creditCardNumber: string, creditCardCvv: string, city: string, country: string, address: string, zipCode: string, expireMonth: string, expireYear: string,  companyName: string, position: string, activityField: string, businessType: string, taxOffice: string, identity: number, companyAddress: string, district: string, service: string): Promise<{ message: string }>
+    delete(id: string): Promise<{ message: string }>
+}

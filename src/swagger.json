@@ -1,0 +1,7108 @@
+{
+  "openapi": "3.0.0",
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "info": {
+    "description": "Happy Backend Project",
+    "version": "1.0.0",
+    "title": "Happy Backend",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "email": "apiteam@swagger.io"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "paths": {
+    "/api/about-us/id": {
+      "get": {
+        "summary": "",
+        "description": "Get Find ID About Us Context",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/about-us/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["About Main"]
+      }
+    },
+    "/api/about-us": {
+      "get": {
+        "summary": "",
+        "description": "Get All About Us Context",
+        "parameters": [],
+        "operationId": "/api/about-us",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["About Main"]
+      },
+      "post": {
+        "summary": "",
+        "description": "Create About Us",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "Image",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Image File"
+          },
+          {
+            "name": "Icon",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": []
+            },
+            "description": "Image File"
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "pattern": ""
+          },
+          {
+            "name": "html",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "example : da2c83c5f19a949dd83751a5d6da8eb5d7058486e83153a2efc205bed0f480785bfc2b2de8558c48f7469e4aa50f888af07259dcad584dd5a7329c410ae3d024e2d4c14be3ffa6687dff124aa518783c34712b2d99ab4297b1aaa3e8d0b48d8495b22e645f730ad4b69415321cfac7768e402f2db5465e46d0179a667bffc311be0a3e5bbc79003233f50ce4035106\nhtml object must be encrypted and sent in JSON format  npm package name 'cryptr' data must be serialized before encryption (JSON.stringify(data))"
+          },
+          {
+            "name": "text",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "context",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/about-us",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["About Main"]
+      },
+      "put": {
+        "summary": "",
+        "description": "Update About Us",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Image",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Image Fİle"
+          },
+          {
+            "name": "Icon",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Image File"
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "html",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "example : da2c83c5f19a949dd83751a5d6da8eb5d7058486e83153a2efc205bed0f480785bfc2b2de8558c48f7469e4aa50f888af07259dcad584dd5a7329c410ae3d024e2d4c14be3ffa6687dff124aa518783c34712b2d99ab4297b1aaa3e8d0b48d8495b22e645f730ad4b69415321cfac7768e402f2db5465e46d0179a667bffc311be0a3e5bbc79003233f50ce4035106\nhtml object must be encrypted and sent in JSON format  npm package name 'cryptr' data must be serialized before encryption (JSON.stringify(data))"
+          },
+          {
+            "name": "text",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "context",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/about-us",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["About Main"]
+      },
+      "delete": {
+        "summary": "",
+        "description": "Delete About Us",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/about-us",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["About Main"]
+      }
+    },
+    "/api/about/id": {
+      "get": {
+        "summary": "",
+        "description": "Get Find ID About Us Context",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/about/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["About"]
+      }
+    },
+    "/api/about": {
+      "get": {
+        "summary": "",
+        "description": "Get All About Us Context",
+        "parameters": [],
+        "operationId": "/api/about",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["About"]
+      },
+      "post": {
+        "summary": "",
+        "description": "Create About Us",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+
+          {
+            "name": "html",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "example : da2c83c5f19a949dd83751a5d6da8eb5d7058486e83153a2efc205bed0f480785bfc2b2de8558c48f7469e4aa50f888af07259dcad584dd5a7329c410ae3d024e2d4c14be3ffa6687dff124aa518783c34712b2d99ab4297b1aaa3e8d0b48d8495b22e645f730ad4b69415321cfac7768e402f2db5465e46d0179a667bffc311be0a3e5bbc79003233f50ce4035106\nhtml object must be encrypted and sent in JSON format  npm package name 'cryptr' data must be serialized before encryption (JSON.stringify(data))"
+          },
+
+          {
+            "name": "Image",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Image File"
+          }
+        ],
+        "operationId": "/api/about",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["About"]
+      },
+      "put": {
+        "summary": "",
+        "description": "Update About Us",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+
+          {
+            "name": "title",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+
+          {
+            "name": "html",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "example : da2c83c5f19a949dd83751a5d6da8eb5d7058486e83153a2efc205bed0f480785bfc2b2de8558c48f7469e4aa50f888af07259dcad584dd5a7329c410ae3d024e2d4c14be3ffa6687dff124aa518783c34712b2d99ab4297b1aaa3e8d0b48d8495b22e645f730ad4b69415321cfac7768e402f2db5465e46d0179a667bffc311be0a3e5bbc79003233f50ce4035106\nhtml object must be encrypted and sent in JSON format  npm package name 'cryptr' data must be serialized before encryption (JSON.stringify(data))"
+          },
+          {
+            "name": "Image",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Image Fİle"
+          }
+        ],
+        "operationId": "/api/about",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["About"]
+      },
+      "delete": {
+        "summary": "",
+        "description": "Delete About Us",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/about",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["About"]
+      }
+    },
+    "/api/users/admin": {
+      "get": {
+        "summary": "",
+        "description": "Get All Admin Users",
+        "parameters": [],
+        "operationId": "/api/users/admin",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Admin"]
+      }
+    },
+    "/api/users/admin/id": {
+      "get": {
+        "summary": "",
+        "description": "Get  Admin User",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/admin/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Admin"]
+      }
+    },
+    "/api/users/admin/sign": {
+      "post": {
+        "summary": "",
+        "description": "Admin User Sign",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/admin/sign",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Admin"]
+      }
+    },
+    "/api/users/admin/logout": {
+      "post": {
+        "summary": "",
+        "description": "Admin User Logout",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/admin/logout",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Admin"]
+      }
+    },
+    "/api/users/admin/create": {
+      "post": {
+        "summary": "",
+        "description": "Admin User Create",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "surname",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "gsmNumber",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "identityNumber",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "city",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "country",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "zipCode",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "email",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "passwordRepeat",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/admin/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Admin"]
+      }
+    },
+    "/api/users/admin/update": {
+      "put": {
+        "summary": "",
+        "description": "Admin User Update",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "surname",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "gsmNumber",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "identityNumber",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "city",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "country",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "zipCode",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "email",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oldPassword",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "newPassword",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "hash",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          }
+        ],
+        "operationId": "/api/users/admin/update",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Admin"]
+      }
+    },
+    "/api/users/admin/delete": {
+      "delete": {
+        "summary": "",
+        "description": "Admin User Delete",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/admin/delete",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Admin"]
+      }
+    },
+    "/api/products/categoryMain": {
+      "get": {
+        "summary": "",
+        "description": "Get All Category Main",
+        "parameters": [],
+        "operationId": "/api/products/categoryMain",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Category Main"]
+      }
+    },
+    "/api/products/categoryMain/id": {
+      "get": {
+        "summary": "",
+        "description": "Get Category Main",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/products/categoryMain/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Category Main"]
+      }
+    },
+    "/api/products/categoryMain/create": {
+      "post": {
+        "summary": "",
+        "description": "Category Main Create",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "api/products/categoryMain/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Category Main"]
+      }
+    },
+    "/api/products/categoryMain/update": {
+      "put": {
+        "summary": "",
+        "description": "Category Main Update",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "api/products/categoryMain/update",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Category Main"]
+      }
+    },
+    "/api/products/categoryMain/delete": {
+      "delete": {
+        "summary": "",
+        "description": "Category Main Delete",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "api/products/categoryMain/delete",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Category Main"]
+      }
+    },
+    "/api/products/category": {
+      "get": {
+        "summary": "",
+        "description": "Get All Category",
+        "parameters": [],
+        "operationId": "/api/products/category",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Category"]
+      }
+    },
+    "/api/products/category/id": {
+      "get": {
+        "summary": "",
+        "description": "Get Category",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/products/category/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Category"]
+      }
+    },
+    "/api/products/category/create": {
+      "post": {
+        "summary": "",
+        "description": "Category Main Create",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "categoryMain",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "api/products/category/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Category"]
+      }
+    },
+    "/api/products/category/update": {
+      "post": {
+        "summary": "",
+        "description": "Category Update",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "categoryMain",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "api/products/category/update",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Category"]
+      }
+    },
+    "/api/products/category/delete": {
+      "delete": {
+        "summary": "",
+        "description": "Category Delete",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "api/products/category/delete",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Category"]
+      }
+    },
+    "/api/products/product": {
+      "get": {
+        "summary": "",
+        "description": "Get All Product",
+        "parameters": [],
+        "operationId": "/api/products/product",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Product"]
+      }
+    },
+    "/api/products/product/id": {
+      "get": {
+        "summary": "",
+        "description": "Get Product",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/products/product/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Product"]
+      }
+    },
+    "/api/products/product/create": {
+      "post": {
+        "summary": "",
+        "description": "Product Create",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "image",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Image File"
+          },
+          {
+            "name": "cargo",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Image File"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cargoTitle",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "quantity",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "price",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "discount",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "property",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "context",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "api/products/product/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Product"]
+      }
+    },
+    "/api/products/product/update": {
+      "post": {
+        "summary": "",
+        "description": "Product Update",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "image",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Image File"
+          },
+          {
+            "name": "cargo",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Image File"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cargoTitle",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "quantity",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "price",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "discount",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "property",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "context",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "api/products/product/update",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Product"]
+      }
+    },
+    "/api/products/product/delete": {
+      "delete": {
+        "summary": "",
+        "description": "Product Delete",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "api/products/product/delete",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Product"]
+      }
+    },
+    "/api/project-consultant/category": {
+      "get": {
+        "summary": "",
+        "description": "Get All Project Consultant",
+        "parameters": [],
+        "operationId": "/api/project-consultant/category",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Project Consultant Category"]
+      }
+    },
+    "/api/project-consultant/category/id": {
+      "get": {
+        "summary": "",
+        "description": "Get  Project Consultant",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/project-consultant/category/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Project Consultant Category"]
+      }
+    },
+    "/api/project-consultant/category/create": {
+      "post": {
+        "summary": "",
+        "description": "Post Project Consultant",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/project-consultant/category/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Project Consultant Category"]
+      }
+    },
+    "/api/project-consultant/category/update": {
+      "put": {
+        "summary": "",
+        "description": "Put Project Consultant",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/project-consultant/category/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Project Consultant Category"]
+      }
+    },
+    "/api/project-consultant/category/delete": {
+      "delete": {
+        "summary": "",
+        "description": "Delete Project Consultant",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/project-consultant/category/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Project Consultant Category"]
+      }
+    },
+    "/api/project-consultant/project": {
+      "get": {
+        "summary": "",
+        "description": "Get All Project Consultant",
+        "parameters": [],
+        "operationId": "/api/project-consultant/project",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Project Consultant"]
+      }
+    },
+    "/api/project-consultant/project/id": {
+      "get": {
+        "summary": "",
+        "description": "Get Project Consultant",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/project-consultant/project/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Project Consultant"]
+      }
+    },
+    "/api/project-consultant/project/create": {
+      "post": {
+        "summary": "",
+        "description": "Post Project Consultant",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "subTitle",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "text",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "image",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/project-consultant/project/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Project Consultant"]
+      }
+    },
+    "/api/project-consultant/project/update": {
+      "put": {
+        "summary": "",
+        "description": "Put Project Consultant",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "subTitle",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "text",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "image",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/project-consultant/project/update",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Project Consultant"]
+      }
+    },
+    "/api/project-consultant/project/delete": {
+      "delete": {
+        "summary": "",
+        "description": "Delete Project Consultant",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/project-consultant/project/delete",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Project Consultant"]
+      }
+    },
+    "/api/announcement/id": {
+      "get": {
+        "summary": "",
+        "description": "Get Find ID Announcement Context",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/announcement/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Announcement"]
+      }
+    },
+    "/api/announcement": {
+      "get": {
+        "summary": "",
+        "description": "Get All Announcement Us Context",
+        "parameters": [],
+        "operationId": "/api/announcement",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Announcement"]
+      },
+      "post": {
+        "summary": "",
+        "description": "Create Announcement",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Image",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Image File"
+          }
+        ],
+        "operationId": "/api/announcement",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Announcement"]
+      },
+      "put": {
+        "summary": "",
+        "description": "Update Announcement",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Image",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Image File"
+          }
+        ],
+        "operationId": "/api/announcement",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Announcement"]
+      },
+      "delete": {
+        "summary": "",
+        "description": "Delete Announcement",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/announcement",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Announcement"]
+      }
+    },
+    "/api/menu/id": {
+      "get": {
+        "summary": "",
+        "description": "Get Find ID Menu Context",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/menu/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Menu"]
+      }
+    },
+    "/api/menu": {
+      "get": {
+        "summary": "",
+        "description": "Get All Menu Us Context",
+        "parameters": [],
+        "operationId": "/api/menu",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Menu"]
+      },
+      "post": {
+        "summary": "",
+        "description": "Create Menu",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "operationId": "/api/menu",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Menu"]
+      },
+      "put": {
+        "summary": "",
+        "description": "Update Menu",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "operationId": "/api/menu",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Menu"]
+      },
+      "delete": {
+        "summary": "",
+        "description": "Delete Menu",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/menu",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Menu"]
+      }
+    },
+    "/api/seo/id": {
+      "get": {
+        "summary": "",
+        "description": "Get Find ID Seo Context",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/seo/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Seo"]
+      }
+    },
+    "/api/seo": {
+      "get": {
+        "summary": "",
+        "description": "Get All Seo Context",
+        "parameters": [],
+        "operationId": "/api/seo",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Seo"]
+      },
+      "post": {
+        "summary": "",
+        "description": "Create Seo",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "keywords",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/seo",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Seo"]
+      },
+      "put": {
+        "summary": "",
+        "description": "Update Menu",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "keywords",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/seo",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Seo"]
+      },
+      "delete": {
+        "summary": "",
+        "description": "Delete Seo",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/seo",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Seo"]
+      }
+    },
+    "/api/concat-us": {
+      "get": {
+        "summary": "",
+        "description": "Get All Concat Us Context",
+        "parameters": [],
+        "operationId": "/api/concat-us",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Concat Us"]
+      },
+      "post": {
+        "summary": "",
+        "description": "Create Concat Us",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "address",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "email",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "phone",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "instagram",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "facebook",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "linkedin",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "mapLink",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/concat-us",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Concat Us"]
+      },
+      "put": {
+        "summary": "",
+        "description": "Update Concat Us",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "address",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "email",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "phone",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "instagram",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "facebook",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "linkedin",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "mapLink",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/concat-us",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Concat Us"]
+      },
+      "delete": {
+        "summary": "",
+        "description": "Delete Concat Us",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/concat-us",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Concat Us"]
+      }
+    },
+    "/api/concat-us/id": {
+      "get": {
+        "summary": "",
+        "description": "Get Find ID Concat Us Context",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/concat-us/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Concat Us"]
+      }
+    },
+    "/api/contract/id": {
+      "get": {
+        "summary": "",
+        "description": "Get Find ID Contract Context",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/contract/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Contract"]
+      }
+    },
+    "/api/contract": {
+      "get": {
+        "summary": "",
+        "description": "Get All Contract Context",
+        "parameters": [],
+        "operationId": "/api/contract",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Contract"]
+      },
+      "post": {
+        "summary": "",
+        "description": "Create Contract",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "surname",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "email",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "address",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/contract",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Contract"]
+      },
+      "put": {
+        "summary": "",
+        "description": "Update Contract",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "surname",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "email",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "address",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/contract",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Contract"]
+      },
+      "delete": {
+        "summary": "",
+        "description": "Delete Contract",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/contract",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Contract"]
+      }
+    },
+    "/api/users/user": {
+      "get": {
+        "summary": "",
+        "description": "Get All Users",
+        "parameters": [],
+        "operationId": "/api/users/users",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["User"]
+      }
+    },
+    "/api/users/user/id": {
+      "get": {
+        "summary": "",
+        "description": "Get User",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/user/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["User"]
+      }
+    },
+    "/api/users/user/sign": {
+      "post": {
+        "summary": "",
+        "description": "User User Sign",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/user/sign",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["User"]
+      }
+    },
+    "/api/users/user/logout": {
+      "post": {
+        "summary": "",
+        "description": "User Logout",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/user/logout",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["User"]
+      }
+    },
+    "/api/users/user/create": {
+      "post": {
+        "summary": "",
+        "description": "User Create",
+        "parameters": [
+          {
+            "name": "surname",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "email",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "image",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "passwordRepeat",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dateOfBirth",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "gender",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "basket",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "order",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "creditCardName",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "creditCardSurname",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "creditCardNumber",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "creditCardCvv",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          }
+        ],
+        "operationId": "/api/users/user/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["User"]
+      }
+    },
+    "/api/users/user/update": {
+      "post": {
+        "summary": "",
+        "description": "User Update",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "surname",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "email",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "image",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oldPassword",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "newPassword",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "hash",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"old password hash"
+          },
+          {
+            "name": "dateOfBirth",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "gender",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "basket",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "order",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "creditCardName",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "creditCardSurname",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "creditCardNumber",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "creditCardCvv",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          }
+        ],
+        "operationId": "/api/users/user/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["User"]
+      }
+    },
+    "/api/users/user/delete": {
+      "delete": {
+        "summary": "",
+        "description": "User Delete",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/user/delete",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["User"]
+      }
+    },
+    "/api/users/user/googleAuth": {
+      "get": {
+        "summary": "",
+        "description": "Get User",
+        "parameters": [],
+        "operationId": "/api/users/user/id",
+        "responses": {
+          "200": {
+            "description": "default password is combination of name and surname example arc warden = arcwarden If photo, google cdn will come, database will be registered, not multer, other fields will be written as 'empty'."
+          }
+        },
+        "tags": ["User"]
+      }
+    },
+    "/api/users/user/getBasket": {
+      "get": {
+        "summary": "",
+        "description": "Get Basket",
+        "parameters": [],
+        "operationId": "/api/users/user/getBasket",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": ["User"]
+      }
+    },
+    "/api/users/user/basket": {
+      "post": {
+        "summary": "",
+        "description": "Post Basket",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "basket",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/user/basket",
+        "responses": {
+          "200": {
+            "description":""
+          } 
+        },
+        "tags": ["User"]
+      }
+    },
+    "/api/users/user/getFollow": {
+      "get": {
+        "summary": "",
+        "description": "Get Follow",
+        "parameters": [],
+        "operationId": "/api/users/user/getFollow",
+        "responses": {
+          "200": {
+            "description":"get follow"
+          }
+        },
+        "tags": ["User Follow"]
+      }
+    },
+    "/api/users/user/getFollowers": {
+      "get": {
+        "summary": "",
+        "description": "Get Followers",
+        "parameters": [],
+        "operationId": "/api/users/user/getFollowers",
+        "responses": {
+          "200": {
+            "description":"get Followers"
+          }
+        },
+        "tags": ["User Follow"]
+      }
+    },
+    "/api/users/user/follow": {
+      "post": {
+        "summary": "",
+        "description": "Post follow",
+        "parameters": [
+          {
+            "name": "follow",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "followers",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/user/follow",
+        "responses": {
+          "200": {
+            "description":"get Followers"
+          }
+        },
+        "tags": ["User Follow"]
+      }
+    },
+    "/api/users/user/unFollow": {
+      "post": {
+        "summary": "",
+        "description": "Post unfollow",
+        "parameters": [
+          {
+            "name": "follow",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "followers",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/user/follow",
+        "responses": {
+          "200": {
+            "description":"get Followers"
+          }
+        },
+        "tags": ["User Follow"]
+      }
+    },
+    "/api/users/user/getRoles": {
+      "get": {
+        "summary": "",
+        "description": "Get FindAll Roles",
+        "parameters": [],
+        "operationId": "/api/users/user/getRoles",
+        "responses": {
+          "200": {
+            "description":"get Roles"
+          }
+        },
+        "tags": ["User Role"]
+      }
+    },
+    "/api/users/user/getRole": {
+      "get": {
+        "summary": "",
+        "description": "Get Find Role",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/user/getRoles",
+        "responses": {
+          "200": {
+            "description":"get Roles"
+          }
+        },
+        "tags": ["User Role"]
+      }
+    },
+    "/api/users/user/getUserRole": {
+      "get": {
+        "summary": "",
+        "description": "Get Find User Role",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/user/getUserRole",
+        "responses": {
+          "200": {
+            "description":"get User Roles"
+          }
+        },
+        "tags": ["User Role"]
+      }
+    },
+    "/api/users/user/getRoleUser": {
+      "get": {
+        "summary": "",
+        "description": "Get Find Role User",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/user/getRoleUser",
+        "responses": {
+          "200": {
+            "description":"get Role User"
+          }
+        },
+        "tags": ["User Role"]
+      }
+    },
+    "/api/users/user/addRoles": {
+      "post": {
+        "summary": "",
+        "description": "add Role",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/user/addRoles",
+        "responses": {
+          "200": {
+            "description":"add Role"
+          }
+        },
+        "tags": ["User Role"]
+      }
+    },
+    "/api/users/user/updateRole": {
+      "put": {
+        "summary": "",
+        "description": "update Role",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/user/updateRole",
+        "responses": {
+          "200": {
+            "description":"add Role"
+          }
+        },
+        "tags": ["User Role"]
+      }
+    },
+    "/api/users/user/deleteRole": {
+      "delete": {
+        "summary": "",
+        "description": "delete Role",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/user/updateRole",
+        "responses": {
+          "200": {
+            "description":"add Role"
+          }
+        },
+        "tags": ["User Role"]
+      }
+    },
+    "/api/users/user/deleteRelRole": {
+      "delete": {
+        "summary": "",
+        "description": "delete Rel Role",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "roleId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/user/updateRole",
+        "responses": {
+          "200": {
+            "description":"add Role"
+          }
+        },
+        "tags": ["User Role"]
+      }
+    },
+    "/api/users/user/addRelRoles": {
+      "post": {
+        "summary": "",
+        "description": "add Role",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "roleId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/user/addRelRoles",
+        "responses": {
+          "200": {
+            "description":"add Role"
+          }
+        },
+        "tags": ["User Role"]
+      }
+    },
+    "/api/users/user/payment": {
+      "post": {
+        "summary": "",
+        "description": "Payment",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/user/payment",
+        "responses": {
+          "200": {
+            "description":"Payment"
+          }
+        },
+        "tags": ["User Payment"]
+      }
+    },
+    "/api/users/user/getFindRoomId": {
+      "get": {
+        "summary": "",
+        "description": "get Chat Room Id ",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "otherUserId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/user/getFindRoomId",
+        "responses": {
+          "200": {
+            "description":"getFindRoomId"
+          }
+        },
+        "tags": ["User Chat"]
+      }
+    },
+    "/api/users/user/getFindRoomName": {
+      "get": {
+        "summary": "",
+        "description": "get Chat Room Name ",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "otherUserId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/user/getFindRoomName",
+        "responses": {
+          "200": {
+            "description":"getFindRoomId"
+          }
+        },
+        "tags": ["User Chat"]
+      }
+    },
+    "/api/users/user/sendMessage": {
+      "post": {
+        "summary": "",
+        "description": "post send Message",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "otherUserId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/user/getFindRoomName",
+        "responses": {
+          "200": {
+            "description":"getFindRoomId"
+          }
+        },
+        "tags": ["User Chat"]
+      }
+    },
+    "/api/users/user/joinRoom": {
+      "post": {
+        "summary": "",
+        "description": "post join Room",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "otherUserId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/user/getFindRoomName",
+        "responses": {
+          "200": {
+            "description":"getFindRoomId"
+          }
+        },
+        "tags": ["User Chat"]
+      }
+    },
+
+    "/api/users/institutional": {
+      "get": {
+        "summary": "",
+        "description": "Get All institutional",
+        "parameters": [],
+        "operationId": "/api/users/institutional",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Institutional"]
+      }
+    },
+    "/api/users/institutional/id": {
+      "get": {
+        "summary": "",
+        "description": "Get institutional",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/institutional/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Institutional"]
+      }
+    },
+    "/api/users/institutional/sign": {
+      "post": {
+        "summary": "",
+        "description": "institutional Sign",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/institutional/sign",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Institutional"]
+      }
+    },
+    "/api/users/institutional/logout": {
+      "post": {
+        "summary": "",
+        "description": "institutional Logout",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/institutional/logout",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Institutional"]
+      }
+    },
+    "/api/users/institutional/create": {
+      "post": {
+        "summary": "",
+        "description": "institutional Create",
+        "parameters": [
+          {
+            "name": "surname",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "email",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "image",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "passwordRepeat",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dateOfBirth",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "gender",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "basket",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "order",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "creditCardName",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "creditCardSurname",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "creditCardNumber",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "creditCardCvv",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "companyName",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "position",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "activityField",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "businessType",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "taxOffice",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "identity",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "companyAddress",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "district",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "service",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          }
+        ],
+        "operationId": "/api/users/institutional/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Institutional"]
+      }
+    },
+    "/api/users/institutional/update": {
+      "put": {
+        "summary": "",
+        "description": "institutional Update",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "surname",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "email",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "image",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "passwordRepeat",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dateOfBirth",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "gender",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "basket",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "order",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "creditCardName",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "creditCardSurname",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "creditCardNumber",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "creditCardCvv",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "companyName",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "position",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "activityField",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "businessType",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "taxOffice",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "identity",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "companyAddress",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "district",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          },
+          {
+            "name": "service",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description":"default empty is required"
+          }
+        ],
+        "operationId": "/api/users/institutional/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Institutional"]
+      }
+    },
+    "/api/users/institutional/delete": {
+      "delete": {
+        "summary": "",
+        "description": "institutional Delete",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/institutional/delete",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Institutional"]
+      }
+    },
+    "/api/users/institutional/googleAuth": {
+      "get": {
+        "summary": "",
+        "description": "Get Institutional",
+        "parameters": [],
+        "operationId": "/api/users/institutional/googleAuth",
+        "responses": {
+          "200": {
+            "description": "default password is combination of name and surname example arc warden = arcwarden If photo, google cdn will come, database will be registered, not multer, other fields will be written as 'empty'."
+          }
+        },
+        "tags": ["Institutional"]
+      }
+    },
+    "/api/users/institutional/getBasket": {
+      "get": {
+        "summary": "",
+        "description": "Get Institutional",
+        "parameters": [],
+        "operationId": "/api/users/institutional/getBasket",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": ["Institutional"]
+      }
+    },
+    "/api/users/institutional/basket": {
+      "post": {
+        "summary": "",
+        "description": "Post Basket",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "basket",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/institutional/basket",
+        "responses": {
+          "200": {
+            "description":""
+          } 
+        },
+        "tags": ["Institutional"]
+      }
+    },
+    "/api/users/institutional/getFollow": {
+      "get": {
+        "summary": "",
+        "description": "Get Follow",
+        "parameters": [],
+        "operationId": "/api/users/institutional/getFollow",
+        "responses": {
+          "200": {
+            "description":"get follow"
+          }
+        },
+        "tags": ["Institutional Follow"]
+      }
+    },
+    "/api/users/institutional/getFollowers": {
+      "get": {
+        "summary": "",
+        "description": "Get Followers",
+        "parameters": [],
+        "operationId": "/api/users/institutional/getFollowers",
+        "responses": {
+          "200": {
+            "description":"get Followers"
+          }
+        },
+        "tags": ["Institutional Follow"]
+      }
+    },
+    "/api/users/institutional/follow": {
+      "post": {
+        "summary": "",
+        "description": "Post follow",
+        "parameters": [
+          {
+            "name": "follow",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "followers",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/institutional/follow",
+        "responses": {
+          "200": {
+            "description":"get Followers"
+          }
+        },
+        "tags": ["Institutional Follow"]
+      }
+    },
+    "/api/users/institutional/unFollow": {
+      "post": {
+        "summary": "",
+        "description": "Post unfollow",
+        "parameters": [
+          {
+            "name": "follow",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "followers",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/institutional/unFollow",
+        "responses": {
+          "200": {
+            "description":"get Followers"
+          }
+        },
+        "tags": ["Institutional Follow"]
+      }
+    },
+    "/api/users/institutional/getRoles": {
+      "get": {
+        "summary": "",
+        "description": "Get FindAll Roles",
+        "parameters": [],
+        "operationId": "/api/users/institutional/getRoles",
+        "responses": {
+          "200": {
+            "description":"get Roles"
+          }
+        },
+        "tags": ["Institutional Role"]
+      }
+    },
+    "/api/users/institutional/getRole": {
+      "get": {
+        "summary": "",
+        "description": "Get Find Role",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/institutional/getRole",
+        "responses": {
+          "200": {
+            "description":"get Roles"
+          }
+        },
+        "tags": ["Institutional Role"]
+      }
+    },
+    "/api/users/institutional/getUserRole": {
+      "get": {
+        "summary": "",
+        "description": "Get Find Institutional Role",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/institutional/getUserRole",
+        "responses": {
+          "200": {
+            "description":"get Institutional Roles"
+          }
+        },
+        "tags": ["Institutional Role"]
+      }
+    },
+    "/api/users/institutional/getRoleUser": {
+      "get": {
+        "summary": "",
+        "description": "Get Find Role Institutional",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/institutional/getRoleUser",
+        "responses": {
+          "200": {
+            "description":"get Role Institutional"
+          }
+        },
+        "tags": ["Institutional Role"]
+      }
+    },
+    "/api/users/institutional/addRoles": {
+      "post": {
+        "summary": "",
+        "description": "add Role",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/institutional/addRoles",
+        "responses": {
+          "200": {
+            "description":"add Role"
+          }
+        },
+        "tags": ["Institutional Role"]
+      }
+    },
+    "/api/users/institutional/updateRole": {
+      "put": {
+        "summary": "",
+        "description": "update Role",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/institutional/updateRole",
+        "responses": {
+          "200": {
+            "description":"add Role"
+          }
+        },
+        "tags": ["Institutional Role"]
+      }
+    },
+    "/api/users/institutional/deleteRole": {
+      "delete": {
+        "summary": "",
+        "description": "delete Role",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/institutional/deleteRole",
+        "responses": {
+          "200": {
+            "description":"add Role"
+          }
+        },
+        "tags": ["Institutional Role"]
+      }
+    },
+    "/api/users/institutional/deleteRelRole": {
+      "delete": {
+        "summary": "",
+        "description": "delete Rel Role",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "roleId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/institutional/deleteRelRole",
+        "responses": {
+          "200": {
+            "description":"add Role"
+          }
+        },
+        "tags": ["Institutional Role"]
+      }
+    },
+    "/api/users/institutional/addRelRoles": {
+      "post": {
+        "summary": "",
+        "description": "add Role",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "roleId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/institutional/addRelRoles",
+        "responses": {
+          "200": {
+            "description":"add Role"
+          }
+        },
+        "tags": ["Institutional Role"]
+      }
+    },
+    "/api/users/institutional/payment": {
+      "post": {
+        "summary": "",
+        "description": "Payment",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/institutional/payment",
+        "responses": {
+          "200": {
+            "description":"Payment"
+          }
+        },
+        "tags": ["Institutional Payment"]
+      }
+    },
+    "/api/users/institutional/getFindRoomId": {
+      "get": {
+        "summary": "",
+        "description": "get Chat Room Id ",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "otherUserId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/institutional/getFindRoomId",
+        "responses": {
+          "200": {
+            "description":"getFindRoomId"
+          }
+        },
+        "tags": ["Institutional Chat"]
+      }
+    },
+    "/api/users/institutional/getFindRoomName": {
+      "get": {
+        "summary": "",
+        "description": "get Chat Room Name ",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "otherUserId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/institutional/getFindRoomName",
+        "responses": {
+          "200": {
+            "description":"getFindRoomId"
+          }
+        },
+        "tags": ["Institutional Chat"]
+      }
+    },
+    "/api/users/institutional/sendMessage": {
+      "post": {
+        "summary": "",
+        "description": "post send Message",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "otherUserId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/institutional/sendMessage",
+        "responses": {
+          "200": {
+            "description":"getFindRoomId"
+          }
+        },
+        "tags": ["Institutional Chat"]
+      }
+    },
+    "/api/users/institutional/joinRoom": {
+      "post": {
+        "summary": "",
+        "description": "post join Room",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "otherUserId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/users/institutional/joinRoom",
+        "responses": {
+          "200": {
+            "description":"getFindRoomId"
+          }
+        },
+        "tags": ["Institutional Chat"]
+      }
+    },
+    "/api/main": {
+      "get": {
+        "summary": "",
+        "description": "Get All OpenEdu Main",
+        "parameters": [],
+        "operationId": "/api/main",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["OpenEdu Main"]
+      },
+      "post": {
+        "summary": "",
+        "description": "Create OpenEdu Main",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "icon",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "context",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/main",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["OpenEdu Main"]
+      },
+      "put": {
+        "summary": "",
+        "description": "Update OpenEdu Main",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "icon",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "context",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/main",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["OpenEdu Main"]
+      },
+      "delete": {
+        "summary": "",
+        "description": "Delete OpenEdu Main",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/main",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["OpenEdu Main"]
+      }
+    },
+    "/api/main/id": {
+      "get": {
+        "summary": "",
+        "description": "Get Find ID OpenEdu Main Context",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/main/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["OpenEdu Main"]
+      }
+    },
+    "/api/academy": {
+      "get": {
+        "summary": "",
+        "description": "Get All OpenEdu Academy",
+        "parameters": [],
+        "operationId": "/api/academy",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["OpenEdu Academy"]
+      },
+      "post": {
+        "summary": "",
+        "description": "Create OpenEdu Academy",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "icon",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "context",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/academy",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["OpenEdu Academy"]
+      },
+      "put": {
+        "summary": "",
+        "description": "Update OpenEdu Academy",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "icon",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "context",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/academy",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["OpenEdu Academy"]
+      },
+      "delete": {
+        "summary": "",
+        "description": "Delete OpenEdu Academy",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/academy",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["OpenEdu Academy"]
+      }
+    },
+    "/api/academy/id": {
+      "get": {
+        "summary": "",
+        "description": "Get Find ID OpenEdu Academy Context",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/academy/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["OpenEdu Academy"]
+      }
+    },
+    "/api/openEdu/category": {
+      "get": {
+        "summary": "",
+        "description": "Get All OpenEdu Category",
+        "parameters": [],
+        "operationId": "/api/openEdu/category",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["OpenEdu Category"]
+      }
+    },
+    "/api/openEdu/category/id": {
+      "get": {
+        "summary": "",
+        "description": "Get OpenEdu Category",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/openEdu/category",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["OpenEdu Category"]
+      }
+    },
+    "/api/openEdu/category/create": {
+      "post": {
+        "summary": "",
+        "description": "Post OpenEdu Category",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/openEdu/category/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["OpenEdu Category"]
+      }
+    },
+    "/api/openEdu/category/update": {
+      "put": {
+        "summary": "",
+        "description": "Put OpenEdu Category",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/openEdu/category/update",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["OpenEdu Category"]
+      }
+    },
+    "/api/openEdu/category/delete": {
+      "delete": {
+        "summary": "",
+        "description": "Delete OpenEdu Category",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/openEdu/category/delete",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["OpenEdu Category"]
+      }
+    },
+    "/api/openEdu/openEdu/": {
+      "get": {
+        "summary": "",
+        "description": "Get All OpenEdu",
+        "parameters": [],
+        "operationId": "/api/openEdu/openEdu",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["OpenEdu"]
+      }
+    },
+    "/api/openEdu/openEdu/id": {
+      "get": {
+        "summary": "",
+        "description": "Get  OpenEdu",
+        "parameters": [],
+        "operationId": "/api/openEdu/openEdu/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["OpenEdu"]
+      }
+    },
+    "/api/openEdu/openEdu/create": {
+      "post": {
+        "summary": "",
+        "description": "Post OpenEdu",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "image",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "html",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "date",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/openEdu/openEdu/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["OpenEdu"]
+      }
+    },
+    "/api/openEdu/openEdu/update": {
+      "put": {
+        "summary": "",
+        "description": "put OpenEdu",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "image",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "html",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "date",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/openEdu/openEdu/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["OpenEdu"]
+      }
+    },
+    "/api/openEdu/openEdu/delete": {
+      "delete": {
+        "summary": "",
+        "description": "put OpenEdu",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/openEdu/openEdu/delete",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["OpenEdu"]
+      }
+    },
+    "/api/blogMain/id": {
+      "get": {
+        "summary": "",
+        "description": "Get Find ID Blog Main Context",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/blogMain/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["blog Main"]
+      }
+    },
+    "/api/blogMain": {
+      "get": {
+        "summary": "",
+        "description": "Get All blog Main Academy",
+        "parameters": [],
+        "operationId": "/api/academy",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["blog Main"]
+      },
+      "post": {
+        "summary": "",
+        "description": "Create blog Main",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "image",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "icon",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "html",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "text",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pageImage",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "questions",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/blogMain",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["blog Main"]
+      },
+      "put": {
+        "summary": "",
+        "description": "Update Blog Main",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "image",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "icon",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "html",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "text",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pageImage",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "questions",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/blogMain",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["blog Main"]
+      },
+      "delete": {
+        "summary": "",
+        "description": "Delete Blog Main",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/blogMain",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["blog Main"]
+      }
+    },
+    "/api/blog/id": {
+      "get": {
+        "summary": "",
+        "description": "Get Find ID Blog  Context",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/blog/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["blog"]
+      }
+    },
+    "/api/blog": {
+      "get": {
+        "summary": "",
+        "description": "Get All blog  Academy",
+        "parameters": [],
+        "operationId": "/api/blog",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["blog"]
+      },
+      "post": {
+        "summary": "",
+        "description": "Create blog",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "image",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "icon",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "html",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "text",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pageImage",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "questions",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/blogMain",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["blog"]
+      },
+      "put": {
+        "summary": "",
+        "description": "Update Blog",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "image",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "icon",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "html",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "text",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pageImage",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "questions",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/blog",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["blog"]
+      },
+      "delete": {
+        "summary": "",
+        "description": "Delete Blog",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/blog",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["blog"]
+      }
+    },
+    "/api/contactForm": {
+      "get": {
+        "summary": "",
+        "description": "Get All Contact Form",
+        "parameters": [],
+        "operationId": "/api/contactForm",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Contact Form"]
+      },
+      "post": {
+        "summary": "",
+        "description": "Create Contact Form",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "surname",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "email",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "companyName",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "message",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "isAccept",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "questions",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/contactForm",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Contact Form"]
+      },
+      "put": {
+        "summary": "",
+        "description": "Update Blog",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "surname",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "email",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "companyName",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "message",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "isAccept",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "questions",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/contactForm",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Contact Form"]
+      },
+      "delete": {
+        "summary": "",
+        "description": "Delete Contact Form",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/contactForm",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Contact Form"]
+      }
+    },
+    "/api/contactForm/id": {
+      "get": {
+        "summary": "",
+        "description": "Get Find ID Contact Form  Context",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/contactForm/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Contact Form"]
+      }
+    },
+    "/api/discoveredUs": {
+      "get": {
+        "summary": "",
+        "description": "Get All Discovered Us",
+        "parameters": [],
+        "operationId": "/api/discoveredUs",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Discovered Us"]
+      },
+      "post": {
+        "summary": "",
+        "description": "Create Discovered Us",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "address",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "email",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "phone",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "instagram",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "facebook",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "linkedin",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "mapLink",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/contactForm",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Discovered Us"]
+      },
+      "put": {
+        "summary": "",
+        "description": "Update Discovered Us",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "address",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "email",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "phone",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "instagram",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "facebook",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "linkedin",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "mapLink",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/discoveredUs",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Discovered Us"]
+      },
+      "delete": {
+        "summary": "",
+        "description": "Delete Discovered Us",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/discoveredUs",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Discovered Us"]
+      }
+    },
+    "/api/notification/id": {
+      "get": {
+        "summary": "",
+        "description": "Get Find ID Notification  Context",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/notification/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Notification"]
+      }
+    },
+    "/api/notification": {
+      "get": {
+        "summary": "",
+        "description": "Get All Notification",
+        "parameters": [],
+        "operationId": "/api/notification",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Notification"]
+      },
+      "post": {
+        "summary": "",
+        "description": "Create Notification",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "context",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/notification",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Notification"]
+      },
+      "put": {
+        "summary": "",
+        "description": "Update Notification",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "context",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/notification",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Notification"]
+      },
+      "delete": {
+        "summary": "",
+        "description": "Delete Notification",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/discoveredUs",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Notification"]
+      }
+    },
+    "/api/ourCollabrotion/id": {
+      "get": {
+        "summary": "",
+        "description": "Get Find ID Our Collabrotion  Context",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/ourCollabrotion/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Our Collabrotion"]
+      }
+    },
+    "/api/ourCollabrotion": {
+      "get": {
+        "summary": "",
+        "description": "Get All Our Collabrotion",
+        "parameters": [],
+        "operationId": "/api/ourCollabrotion",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Our Collabrotion"]
+      },
+      "post": {
+        "summary": "",
+        "description": "Create Our Collabrotion",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "link",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "image",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "text",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/ourCollabrotion",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Our Collabrotion"]
+      },
+      "put": {
+        "summary": "",
+        "description": "Update Our Collabrotion",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "link",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "image",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "text",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/ourCollabrotion",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Our Collabrotion"]
+      },
+      "delete": {
+        "summary": "",
+        "description": "Delete Our Collabrotion",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/ourCollabrotion",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Our Collabrotion"]
+      }
+    },
+    "/api/ourService/id": {
+      "get": {
+        "summary": "",
+        "description": "Get Find ID Our Service  Context",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/ourService/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Our Service"]
+      }
+    },
+    "/api/ourService": {
+      "get": {
+        "summary": "",
+        "description": "Get All Our Service",
+        "parameters": [],
+        "operationId": "/api/ourService",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Our Service"]
+      },
+      "post": {
+        "summary": "",
+        "description": "Create Our Service",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "link",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "text",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/ourService",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Our Service"]
+      },
+      "put": {
+        "summary": "",
+        "description": "Update Our Service",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "link",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "text",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/ourService",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Our Service"]
+      },
+      "delete": {
+        "summary": "",
+        "description": "Delete Our Service",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/ourService",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Our Service"]
+      }
+    },
+    "/api/privacy/id": {
+      "get": {
+        "summary": "",
+        "description": "Get Find ID Privacy Context",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/privacy/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Privacy"]
+      }
+    },
+    "/api/privacy": {
+      "get": {
+        "summary": "",
+        "description": "Get All Privacy",
+        "parameters": [],
+        "operationId": "/api/privacy",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Privacy"]
+      },
+      "post": {
+        "summary": "",
+        "description": "Create Privacy",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "context",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/privacy",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Privacy"]
+      },
+      "put": {
+        "summary": "",
+        "description": "Update Privacy",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "context",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/privacy",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Privacy"]
+      },
+      "delete": {
+        "summary": "",
+        "description": "Delete Privacy",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/privacy",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Privacy"]
+      }
+    },
+    "/api/slide/id": {
+      "get": {
+        "summary": "",
+        "description": "Get Find ID Slide Context",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/slide/id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Slide"]
+      }
+    },
+    "/api/slide": {
+      "get": {
+        "summary": "",
+        "description": "Get All Slide",
+        "parameters": [],
+        "operationId": "/api/slide",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": ["Slide"]
+      },
+      "post": {
+        "summary": "",
+        "description": "Create Slide",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "header",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "image",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "text",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/slide",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Slide"]
+      },
+      "put": {
+        "summary": "",
+        "description": "Update Slide",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "header",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "image",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "text",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "/api/privacy",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Slide"]
+      },
+      "delete": {
+        "summary": "",
+        "description": "Delete Slide",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Admin Token"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "id must be JSON sent"
+          }
+        ],
+        "operationId": "/api/slide",
+        "responses": {
+          "default": {
+            "description": "Default response"
+          }
+        },
+        "tags": ["Slide"]
+      }
+    }
+  }
+}

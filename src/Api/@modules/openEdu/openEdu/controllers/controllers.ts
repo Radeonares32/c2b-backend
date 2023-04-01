@@ -1,0 +1,1 @@
+export * as openEdu from './openEdu.controllers'

@@ -1,0 +1,1 @@
+export * as aboutMain from './aboutMain.controllers'

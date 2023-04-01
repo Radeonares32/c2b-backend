@@ -1,0 +1,1 @@
+export * as blogMain from './blogMain.controller'

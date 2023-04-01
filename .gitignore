@@ -1,0 +1,6 @@
+node_modules/
+dist/
+src/core/adapters/docker/data/dump.rdb
+yarn-error.log
+yarn.lock
+.idea

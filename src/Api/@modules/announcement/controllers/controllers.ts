@@ -1,0 +1,1 @@
+export * as announcement from './announcement.controller'

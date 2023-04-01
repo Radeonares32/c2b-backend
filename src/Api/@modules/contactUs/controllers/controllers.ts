@@ -1,0 +1,1 @@
+export * as concatUs from './concatUs.controller'

@@ -1,0 +1,1 @@
+export * as seo from './seo.controller'
