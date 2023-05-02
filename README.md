@@ -19,7 +19,7 @@ Redis is preferred for cache, each module is designed according to n tier archit
 
 
 ## 🛠 Skills
-Typescipt, MongoDB, Redis, JWT, Neo4j, ExpressJS, Docker
+Typescript, MongoDB, Redis, JWT, Neo4j, ExpressJS, Docker
 
 
 ## License
