@@ -1,0 +1,7647 @@
+{
+	"info": {
+		"_postman_id": "a8e6aca9-f6cb-4555-8731-1c1999d68021",
+		"name": "C2B_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19076786"
+	},
+	"item": [
+		{
+			"name": "AboutMain",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/about-us",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"about-us"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"63cb39b164e93b6768a4a230\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/about-us/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"about-us",
+								"id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "63cb39b164e93b6768a4a230",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_4.jpg"
+								},
+								{
+									"key": "icon",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_3.jpg"
+								},
+								{
+									"key": "html",
+									"value": "da2c83c5f19a949dd83751a5d6da8eb5d7058486e83153a2efc205bed0f480785bfc2b2de8558c48f7469e4aa50f888af07259dcad584dd5a7329c410ae3d024e2d4c14be3ffa6687dff124aa518783c34712b2d99ab4297b1aaa3e8d0b48d8495b22e645f730ad4b69415321cfac7768e402f2db5465e46d0179a667bffc311be0a3e5bbc79003233f50ce4035106",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "deneme100",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "deneme_description1",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "deneme2",
+									"type": "text"
+								},
+								{
+									"key": "context",
+									"value": "icon description3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/about-us",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"about-us"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "63cb39b164e93b6768a4a230",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_4.jpg"
+								},
+								{
+									"key": "icon",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_2.jpg"
+								},
+								{
+									"key": "html",
+									"value": "da2c83c5f19a949dd83751a5d6da8eb5d7058486e83153a2efc205bed0f480785bfc2b2de8558c48f7469e4aa50f888af07259dcad584dd5a7329c410ae3d024e2d4c14be3ffa6687dff124aa518783c34712b2d99ab4297b1aaa3e8d0b48d8495b22e645f730ad4b69415321cfac7768e402f2db5465e46d0179a667bffc311be0a3e5bbc79003233f50ce4035106",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "title3",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "description 2",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "text 2",
+									"type": "text"
+								},
+								{
+									"key": "context",
+									"value": "context 3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/about-us",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"about-us"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"63d775dfe918825a50267802\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/about-us",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"about-us"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SolutionMain",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/solutionMain",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"solutionMain"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/solutionMain/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"solutionMain",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_3.jpg"
+								},
+								{
+									"key": "icon",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_5.jpg"
+								},
+								{
+									"key": "html",
+									"value": "6d43745f64ac0676a22f14573c4e87874c95eabde16e976163448f4bd6060ba1ab36eb6031a50c438af017c18fed245b7ffedc33bdabdddf50dde747d906f55bab52a4f3b55839a931285b3ba00348183acdc755e19afb4a22bea92416884eadeb772fb0fc32d2a712b00460dec20b67c7d4b6cf504280b1e5c21ffbeab7c9ab5f158b6a4950aa0d49087a319057",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "deneme100",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "deneme_description1",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "deneme2",
+									"type": "text"
+								},
+								{
+									"key": "pageImage",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_4.jpg"
+								},
+								{
+									"key": "questions",
+									"value": "e106293a279408d374460b588dbbfdbb5688df7573d1c318e39a47233bcd8207ffbf805d5d00ad9082f287eaeeb268c398058f993862268231194c747ef17ed70bb9878aa6f3dbd1d3d7d61cf916d5f39a324e6d0c820779c3492a5a8b96c92f602b42006cc6eebf75bfd723d719cecca25fbaa9f80da3f041da16183942dfa3d2ad8230291abd13d59deee6fc3c500e19d8f34257ab5e72f50d272874fc208d04ce62f630de0d",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/solutionMain/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"solutionMain",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_5.jpg"
+								},
+								{
+									"key": "icon",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_3.jpg"
+								},
+								{
+									"key": "html",
+									"value": "6d43745f64ac0676a22f14573c4e87874c95eabde16e976163448f4bd6060ba1ab36eb6031a50c438af017c18fed245b7ffedc33bdabdddf50dde747d906f55bab52a4f3b55839a931285b3ba00348183acdc755e19afb4a22bea92416884eadeb772fb0fc32d2a712b00460dec20b67c7d4b6cf504280b1e5c21ffbeab7c9ab5f158b6a4950aa0d49087a319057",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "deneme200",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "deneme_description1",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "deneme2",
+									"type": "text"
+								},
+								{
+									"key": "pageImage",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_4.jpg"
+								},
+								{
+									"key": "questions",
+									"value": "e106293a279408d374460b588dbbfdbb5688df7573d1c318e39a47233bcd8207ffbf805d5d00ad9082f287eaeeb268c398058f993862268231194c747ef17ed70bb9878aa6f3dbd1d3d7d61cf916d5f39a324e6d0c820779c3492a5a8b96c92f602b42006cc6eebf75bfd723d719cecca25fbaa9f80da3f041da16183942dfa3d2ad8230291abd13d59deee6fc3c500e19d8f34257ab5e72f50d272874fc208d04ce62f630de0d",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "640506a7bd78dfb2d41345f7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/solutionMain/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"solutionMain",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"6405094335c6154b8add73d5\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/solutionMain",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"solutionMain"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "About",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/about",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"about"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"63ceed315aac9633f2f9babc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/about/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"about",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "html",
+									"value": "da2c83c5f19a949dd83751a5d6da8eb5d7058486e83153a2efc205bed0f480785bfc2b2de8558c48f7469e4aa50f888af07259dcad584dd5a7329c410ae3d024e2d4c14be3ffa6687dff124aa518783c34712b2d99ab4297b1aaa3e8d0b48d8495b22e645f730ad4b69415321cfac7768e402f2db5465e46d0179a667bffc311be0a3e5bbc79003233f50ce4035106",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "test-about-3",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_4.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/about",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"about"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "63ceedcae7752cf89a0708ff",
+									"type": "text"
+								},
+								{
+									"key": "html",
+									"value": "da2c83c5f19a949dd83751a5d6da8eb5d7058486e83153a2efc205bed0f480785bfc2b2de8558c48f7469e4aa50f888af07259dcad584dd5a7329c410ae3d024e2d4c14be3ffa6687dff124aa518783c34712b2d99ab4297b1aaa3e8d0b48d8495b22e645f730ad4b69415321cfac7768e402f2db5465e46d0179a667bffc311be0a3e5bbc79003233f50ce4035106",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "test-about-update-1",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_5.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/about",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"about"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"63ceed315aac9633f2f9babc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/about",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"about"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/users/admin",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"64013b1de4e66395f87bae06\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/users/admin/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"admin",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sign",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"admin@gmail.com\",\n    \"password\":\"123\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/users/admin/sign",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"admin",
+								"sign"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/users/admin/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"admin",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"admin@gmail.com\",\n    \"password\":\"123\",\n    \"passwordRepeat\":\"123\",\n    \"name\":\"admin\",\n    \"surname\":\"admin\",\n    \"gsmNumber\":\"+905350000000\",\n    \"identityNumber\":\"74300864791\",\n    \"city\":\"Istanbul\",\n    \"country\":\"Turkey\",\n    \"zipCode\":\"34732\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/users/admin/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"admin",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"63d1a12c4fd5c96f6932a7ed\",\n    \"email\":\"admin12@gmail.com\",\n    \"oldPassword\":\"123\",\n    \"newPassword\":\"1234\",\n    \"hash\":\"$2b$08$/N35BTHtNH3el5qMdCJe/.kt1CxbRcrqlA1xsr259K8gqIV//JOzi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/users/admin/update",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"admin",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"63d4039073f75e149fd1ec03\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/users/admin/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"admin",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "CategoryMain",
+					"item": [
+						{
+							"name": "SubCategory",
+							"item": [
+								{
+									"name": "findAll",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:3000/api/products/category/",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"products",
+												"category",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "find",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\":\"63dadb81230c40613fdef2d0\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/products/category/id",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"products",
+												"category",
+												"id"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\":\"urunler\",\n    \"categoryMain\":\"63dadb68230c40613fdef2cc\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/products/category/create",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"products",
+												"category",
+												"create"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\":\"63dadb81230c40613fdef2d0\",\n    \"title\":\"title_updated\",\n    \"categoryMain\":\"63dae224017773c036c0f8a9\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/products/category/update",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"products",
+												"category",
+												"update"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\":\"63dadb81230c40613fdef2d0\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/products/category/delete",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"products",
+												"category",
+												"delete"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "findAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/products/categoryMain",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"products",
+										"categoryMain"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "find",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"63da36089bf8e6376f3d882a\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/products/categoryMain/id",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"products",
+										"categoryMain",
+										"id"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"title1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/products/categoryMain/create",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"products",
+										"categoryMain",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"63da36089bf8e6376f3d882a\",\n    \"title\":\"title_update\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/products/categoryMain/update",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"products",
+										"categoryMain",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"63da36089bf8e6376f3d882a\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/products/categoryMain/delete",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"products",
+										"categoryMain",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "findAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:3000/api/products/product/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/products/product/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"product",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": [
+										"/home/radeonares/Pictures/wallpapers/wallpaper_1.jpg",
+										"/home/radeonares/Pictures/wallpapers/wallpaper_4.jpg",
+										"/home/radeonares/Pictures/wallpapers/wallpaper_5.jpg"
+									]
+								},
+								{
+									"key": "cargo",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_2.jpg"
+								},
+								{
+									"key": "name",
+									"value": "test_name",
+									"type": "text"
+								},
+								{
+									"key": "cargoTitle",
+									"value": "test_cargo",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "descriprion",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "300",
+									"type": "text"
+								},
+								{
+									"key": "discount",
+									"value": "200",
+									"type": "text"
+								},
+								{
+									"key": "property",
+									"value": "ozellikler",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "63dae2f8017773c036c0f8b6",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "renk",
+									"type": "text"
+								},
+								{
+									"key": "context",
+									"value": "beyaz",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/products/product/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"product",
+								"create"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "63dc6168c25efc98bb0f7926",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": [
+										"/home/radeonares/Pictures/wallpapers/wallpaper_1.jpg",
+										"/home/radeonares/Pictures/wallpapers/wallpaper_2.jpg"
+									]
+								},
+								{
+									"key": "cargo",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_3.jpg"
+								},
+								{
+									"key": "name",
+									"value": "test_name_update",
+									"type": "text"
+								},
+								{
+									"key": "cargoTitle",
+									"value": "test_cargo",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "descriprion",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "300",
+									"type": "text"
+								},
+								{
+									"key": "discount",
+									"value": "200",
+									"type": "text"
+								},
+								{
+									"key": "property",
+									"value": "ozellikler",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "63dae2f8017773c036c0f8b6",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "renk",
+									"type": "text"
+								},
+								{
+									"key": "context",
+									"value": "beyaz",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/products/product/update",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"product",
+								"update"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"63dc6168c25efc98bb0f7926\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/products/product/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"product",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProjectConsultant",
+			"item": [
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "findAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/project-consultant/category",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"project-consultant",
+										"category"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "find",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"63e68068c5c98dd6a9487498\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/project-consultant/category/id",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"project-consultant",
+										"category",
+										"id"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"danismanlik_1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/project-consultant/category/create",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"project-consultant",
+										"category",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"63e67fd5c5c98dd6a948748f\",\n    \"title\":\"danısmanlık\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/project-consultant/category/update",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"project-consultant",
+										"category",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"63e68068c5c98dd6a9487498\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/project-consultant/category/delete",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"project-consultant",
+										"category",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/project-consultant/project",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"project-consultant",
+								"project"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"63e69406af5d916cad59299a\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/project-consultant/project/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"project-consultant",
+								"project",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "title-test",
+									"type": "text"
+								},
+								{
+									"key": "subTitle",
+									"value": "title-sub-title-test",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "title-text",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_4.jpg"
+								},
+								{
+									"key": "category",
+									"value": "63e67fd5c5c98dd6a948748f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/project-consultant/project/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"project-consultant",
+								"project",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "63e69406af5d916cad59299a",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "titleTest",
+									"type": "text"
+								},
+								{
+									"key": "subTitle",
+									"value": "titleSubTest",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "textTest",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_5.jpg"
+								},
+								{
+									"key": "category",
+									"value": "63e67fd5c5c98dd6a948748f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/project-consultant/project/update",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"project-consultant",
+								"project",
+								"update"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"63e69406af5d916cad59299a\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/project-consultant/project/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"project-consultant",
+								"project",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Announcement",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/announcement",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"announcement"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"63e802f964e13e3cf8b06835\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/announcement/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"announcement",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "test announcement",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_3.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/announcement",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"announcement"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "63e802f964e13e3cf8b06835",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "test 1 announcement",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_5.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/announcement",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"announcement"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"63e802f964e13e3cf8b06835\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/announcement",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"announcement"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "menu",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/menu",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"63e94fd2edac2d87e95bd423\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/menu/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"menu",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"test name\",\n    \"type\":\"test type\",\n    \"status\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/menu",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"63e94fd2edac2d87e95bd423\",\n    \"name\":\"test name-1\",\n    \"type\":\"test type-1\",\n    \"status\":false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/menu",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"63e94fd2edac2d87e95bd423\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/menu",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"menu"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Seo",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/seo",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"seo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"63ead823225ff6fd73fced9b\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/seo/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"seo",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"test-title\",\n    \"description\":\"test-description\",\n    \"keywords\":\"test-keywords\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/seo/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"seo",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"63ead823225ff6fd73fced9b\",\n    \"title\":\"test-title-1\",\n    \"description\":\"test-description-1\",\n    \"keywords\":\"test-keywords-1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/seo",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"seo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"63ead823225ff6fd73fced9b\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/seo",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"seo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ConcatUs",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/concat-us/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"concat-us",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"63ec10d55b0afeda23432263\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/concat-us/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"concat-us",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address\":\"address\",\n    \"email\":\"email@gmail.com\",\n    \"phone\":\"+905522344321\",\n    \"instagram\":\"test-ins\",\n    \"facebook\":\"test-face\",\n    \"linkedin\":\"test-linkedin\",\n    \"mapLink\":\"test-mapLink\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/concat-us/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"concat-us",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"63ec10d55b0afeda23432263\",\n    \"address\":\"address1\",\n    \"email\":\"email@gmail2.com\",\n    \"phone\":\"+905522344321\",\n    \"instagram\":\"test-ins1\",\n    \"facebook\":\"test-face1\",\n    \"linkedin\":\"test-linkedin1\",\n    \"mapLink\":\"test-mapLink1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/concat-us",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"concat-us"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"63ec10d55b0afeda23432263\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/concat-us",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"concat-us"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contract",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/contract",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"contract"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"id\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/contract/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"contract",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"name\",\n    \"surname\":\"surname\",\n    \"email\":\"email\",\n    \"address\":\"address\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/contract",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"contract"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"id\",\n    \"name\":\"name\",\n    \"surname\":\"surname\",\n    \"email\":\"email\",\n    \"address\":\"address\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/contract",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"contract"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"id\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/contract",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"contract"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "StandartUser",
+					"item": [
+						{
+							"name": "Role",
+							"item": [
+								{
+									"name": "getRoles",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/user/getRoles",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"user",
+												"getRoles"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getRole",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\":\"12256d11-e93b-434c-852d-1a5a5db94f1d\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/user/getRole",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"user",
+												"getRole"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getUserRole",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"userId\":\"052b9e1c-c8cd-480b-ad14-272807d89c7c\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/user/getUserRole",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"user",
+												"getUserRole"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getRoleUser",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\":\"12256d11-e93b-434c-852d-1a5a5db94f1d\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/user/getRoleUser",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"user",
+												"getRoleUser"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "addRoles",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\":\"moderator\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/user/addRoles",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"user",
+												"addRoles"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "addRelRoles",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"userId\":\"480828fe-1c00-45d1-8b5b-785241492e11\",\n    \"roleId\":\"12256d11-e93b-434c-852d-1a5a5db94f1d\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/user/addRelRoles",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"user",
+												"addRelRoles"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "updateRole",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\":\"afb438f2-d23c-4dff-b15f-88d56bae3cdb\",\n     \"name\":\"Moderator\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/user/updateRole",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"user",
+												"updateRole"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "deleteRelRole",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"userId\":\"480828fe-1c00-45d1-8b5b-785241492e11\",\n     \"roleId\":\"afb438f2-d23c-4dff-b15f-88d56bae3cdb\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/user/deleteRelRole",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"user",
+												"deleteRelRole"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "deleteRole",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\":\"afb438f2-d23c-4dff-b15f-88d56bae3cdb\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/user/deleteRole",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"user",
+												"deleteRole"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Follow",
+							"item": [
+								{
+									"name": "getFollow",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"follow\":\"ea7cd52a-6dec-4947-86ba-d9411df68755\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/user/getFollow",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"user",
+												"getFollow"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getFollowers",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"followers\":\"43b487dd-a23a-447a-89cb-dd73bbd0c992\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/user/getFollowers",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"user",
+												"getFollowers"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "follow",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{userToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"follow\":\"ea7cd52a-6dec-4947-86ba-d9411df68755\",\n    \"followers\":\"43b487dd-a23a-447a-89cb-dd73bbd0c992\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/user/follow",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"user",
+												"follow"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "unFollow",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{userToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"follow\":\"ea7cd52a-6dec-4947-86ba-d9411df68755\",\n    \"followers\":\"43b487dd-a23a-447a-89cb-dd73bbd0c992\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/user/unFollow",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"user",
+												"unFollow"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Chat",
+							"item": [
+								{
+									"name": "getFindRoomId",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{userToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"userId\":\"24ed3712-88bb-4cf7-8e70-9a42c7b28fa3\",\n    \"otherUserId\":\"480828fe-1c00-45d1-8b5b-785241492e11\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/user/getFindRoomId",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"user",
+												"getFindRoomId"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getFindRoomName",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{userToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"userId\":\"24ed3712-88bb-4cf7-8e70-9a42c7b28fa3\",\n    \"otherUserId\":\"480828fe-1c00-45d1-8b5b-785241492e11\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/user/getFindRoomName",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"user",
+												"getFindRoomName"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "joinRoom",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{userToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"userId\":\"480828fe-1c00-45d1-8b5b-785241492e11\",\n    \"otherUserId\":\"24ed3712-88bb-4cf7-8e70-9a42c7b28fa3\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/user/joinRoom",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"user",
+												"joinRoom"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "sendMessage",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{userToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"userId\":\"480828fe-1c00-45d1-8b5b-785241492e11\",\n    \"otherUserId\":\"24ed3712-88bb-4cf7-8e70-9a42c7b28fa3\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/user/sendMessage",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"user",
+												"sendMessage"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "findAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/users/user",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "find",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"952247ae-146f-45d4-9167-a18be7e4b0c9\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/users/user/id",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"user",
+										"id"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "googleAuth",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/users/user/googleAuth",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"user",
+										"googleAuth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getBasket",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"ea7cd52a-6dec-4947-86ba-d9411df68755\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/users/user/getBasket",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"user",
+										"getBasket"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getOrder",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"ea7cd52a-6dec-4947-86ba-d9411df68755\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/users/user/getOrder",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"user",
+										"getOrder"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "logout",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1Z3JhQGdtYWlsLmNvbSIsImlhdCI6MTY3NzYwNTAwOCwiZXhwIjoxNjc3NjA4NjA4fQ.8jnWaUfPvTgPQFqbFwbSoURYWCImd3apFtZi4Imu_rs",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/api/users/user/logout",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"user",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "buğra",
+											"type": "text"
+										},
+										{
+											"key": "surname",
+											"value": "atik",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "bugra@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/radeonares/Pictures/wallpapers/wallpaper_4.jpg"
+										},
+										{
+											"key": "phone",
+											"value": "+905350000000",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "passwordRepeat",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "dateOfBirth",
+											"value": "20/03/2001",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "male",
+											"type": "text"
+										},
+										{
+											"key": "basket",
+											"value": "empty",
+											"type": "text"
+										},
+										{
+											"key": "order",
+											"value": "empty",
+											"type": "text"
+										},
+										{
+											"key": "creditCardName",
+											"value": "osman",
+											"type": "text"
+										},
+										{
+											"key": "creditCardSurname",
+											"value": "güleryılmaz",
+											"type": "text"
+										},
+										{
+											"key": "creditCardNumber",
+											"value": "5526080000000006",
+											"type": "text"
+										},
+										{
+											"key": "creditCardCvv",
+											"value": "322",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "Istanbul",
+											"type": "text"
+										},
+										{
+											"key": "country",
+											"value": "Turkey",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1",
+											"type": "text"
+										},
+										{
+											"key": "zipCode",
+											"value": "34732",
+											"type": "text"
+										},
+										{
+											"key": "identityNumber",
+											"value": "74300864791",
+											"type": "text"
+										},
+										{
+											"key": "expireMonth",
+											"value": "12",
+											"type": "text"
+										},
+										{
+											"key": "expireYear",
+											"value": "2030",
+											"type": "text"
+										},
+										{
+											"key": "testfield",
+											"value": "123123",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3000/api/users/user/create",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"user",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sign",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"fatma@gmail.com\",\n    \"password\":\"123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/users/user/sign",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"user",
+										"sign"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "basket",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"4eb8fd57-bc70-4cc1-8920-5ebdd20ac66f\",\n    \"basket\":[\n        {\n        \"id\":\"1\",\n        \"name\":\"urun1\",\n        \"category1\":\"kiyafet\",\n        \"price\":200\n    },\n     {\n        \"id\":\"2\",\n        \"name\":\"urun2\",\n        \"category1\":\"kiyafet\",\n        \"price\":200\n    }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/users/user/basket",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"user",
+										"basket"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "order",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"ea7cd52a-6dec-4947-86ba-d9411df68755\",\n  \"order\": [\n    {\n      \"id\": \"1\",\n      \"productName\": \"urun1\",\n      \"productQuantity\": 3,\n      \"productPrice\": 600\n    },\n    {\n      \"id\": \"2\",\n      \"productName\": \"urun2\",\n      \"productQuantity\": 3,\n      \"productPrice\": 100\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/users/user/order",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"user",
+										"order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "payment",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"4eb8fd57-bc70-4cc1-8920-5ebdd20ac66f\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/users/user/payment",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"user",
+										"payment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "4eb8fd57-bc70-4cc1-8920-5ebdd20ac66f",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "bugra-test",
+											"type": "text"
+										},
+										{
+											"key": "surname",
+											"value": "atik",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "bugra@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/radeonares/Pictures/wallpapers/wallpaper_3.jpg"
+										},
+										{
+											"key": "phone",
+											"value": "5524566545",
+											"type": "text"
+										},
+										{
+											"key": "oldPassword",
+											"value": "1234",
+											"type": "text"
+										},
+										{
+											"key": "newPassword",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "dateOfBirth",
+											"value": "20/03/2001",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "male",
+											"type": "text"
+										},
+										{
+											"key": "basket",
+											"value": "empty",
+											"type": "text"
+										},
+										{
+											"key": "order",
+											"value": "empty",
+											"type": "text"
+										},
+										{
+											"key": "creditCardName",
+											"value": "bugra-test",
+											"type": "text"
+										},
+										{
+											"key": "creditCardSurname",
+											"value": "atik",
+											"type": "text"
+										},
+										{
+											"key": "creditCardNumber",
+											"value": "123123214321412",
+											"type": "text"
+										},
+										{
+											"key": "creditCardCvv",
+											"value": "322",
+											"type": "text"
+										},
+										{
+											"key": "hash",
+											"value": "$2b$08$7o4pSBaaSpQXufEfIcj5MeR6MaE37dss5X44yTwvut9C8G1n6WbxC",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "Istanbul",
+											"type": "text"
+										},
+										{
+											"key": "country",
+											"value": "Turkey",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1",
+											"type": "text"
+										},
+										{
+											"key": "zipCode",
+											"value": "34732",
+											"type": "text"
+										},
+										{
+											"key": "identityNumber",
+											"value": "123132",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3000/api/users/user/update",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"user",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"0b519106-9879-4962-898b-f24e7a9564f2\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/users/user/delete",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"user",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "InstitutionalUser",
+					"item": [
+						{
+							"name": "Role",
+							"item": [
+								{
+									"name": "getRoles",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/institutional/getRoles",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"institutional",
+												"getRoles"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getRole",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\":\"12256d11-e93b-434c-852d-1a5a5db94f1d\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/institutional/getRole",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"institutional",
+												"getRole"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getUserRole",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"userId\":\"ad93952e-35b4-4504-bb77-5a47fcc2f435\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/institutional/getUserRole",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"institutional",
+												"getUserRole"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getRoleUser",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\":\"12256d11-e93b-434c-852d-1a5a5db94f1d\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/institutional/getRoleUser",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"institutional",
+												"getRoleUser"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "addRoles",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\":\"Entrp\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/institutional/addRoles",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"institutional",
+												"addRoles"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "addRelRoles",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"userId\":\"ad93952e-35b4-4504-bb77-5a47fcc2f435\",\n    \"roleId\":\"00e83f2e-6ac3-4401-a6b7-032d3e3058fc\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/institutional/addRelRoles",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"institutional",
+												"addRelRoles"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "updateRole",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\":\"00e83f2e-6ac3-4401-a6b7-032d3e3058fc\",\n     \"name\":\"Entrp1\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/institutional/updateRole",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"institutional",
+												"updateRole"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "deleteRelRole",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"userId\":\"480828fe-1c00-45d1-8b5b-785241492e11\",\n     \"roleId\":\"afb438f2-d23c-4dff-b15f-88d56bae3cdb\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/institutional/deleteRelRole",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"institutional",
+												"deleteRelRole"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "deleteRole",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\":\"afb438f2-d23c-4dff-b15f-88d56bae3cdb\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/institutional/deleteRole",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"institutional",
+												"deleteRole"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Follow",
+							"item": [
+								{
+									"name": "getFollow",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"follow\":\"ea7cd52a-6dec-4947-86ba-d9411df68755\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/institutional/getFollow",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"institutional",
+												"getFollow"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getFollowers",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"followers\":\"43b487dd-a23a-447a-89cb-dd73bbd0c992\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/institutional/getFollowers",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"institutional",
+												"getFollowers"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "follow",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{userToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"follow\":\"ea7cd52a-6dec-4947-86ba-d9411df68755\",\n    \"followers\":\"43b487dd-a23a-447a-89cb-dd73bbd0c992\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/institutional/follow",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"institutional",
+												"follow"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "unFollow",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{userToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"follow\":\"ea7cd52a-6dec-4947-86ba-d9411df68755\",\n    \"followers\":\"43b487dd-a23a-447a-89cb-dd73bbd0c992\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/institutional/unFollow",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"institutional",
+												"unFollow"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Chat",
+							"item": [
+								{
+									"name": "getFindRoomId",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{userToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"userId\":\"24ed3712-88bb-4cf7-8e70-9a42c7b28fa3\",\n    \"otherUserId\":\"480828fe-1c00-45d1-8b5b-785241492e11\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/institutional/getFindRoomId",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"institutional",
+												"getFindRoomId"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getFindRoomName",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{userToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"userId\":\"24ed3712-88bb-4cf7-8e70-9a42c7b28fa3\",\n    \"otherUserId\":\"480828fe-1c00-45d1-8b5b-785241492e11\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/institutional/getFindRoomName",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"institutional",
+												"getFindRoomName"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "joinRoom",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{userToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"userId\":\"480828fe-1c00-45d1-8b5b-785241492e11\",\n    \"otherUserId\":\"24ed3712-88bb-4cf7-8e70-9a42c7b28fa3\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/institutional/joinRoom",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"institutional",
+												"joinRoom"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "sendMessage",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{userToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"userId\":\"480828fe-1c00-45d1-8b5b-785241492e11\",\n    \"otherUserId\":\"24ed3712-88bb-4cf7-8e70-9a42c7b28fa3\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/users/institutional/sendMessage",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"users",
+												"institutional",
+												"sendMessage"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "findAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/users/institutional",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"institutional"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "find",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"ad93952e-35b4-4504-bb77-5a47fcc2f435\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/users/institutional/id",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"institutional",
+										"id"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "googleAuth",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/users/institutional/googleAuth",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"institutional",
+										"googleAuth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getBasket",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"ad93952e-35b4-4504-bb77-5a47fcc2f435\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/users/institutional/getBasket",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"institutional",
+										"getBasket"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getOrder",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"ea7cd52a-6dec-4947-86ba-d9411df68755\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/users/institutional/getOrder",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"institutional",
+										"getOrder"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "logout",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1Z3JhQGdtYWlsLmNvbSIsImlhdCI6MTY3NzYwNTAwOCwiZXhwIjoxNjc3NjA4NjA4fQ.8jnWaUfPvTgPQFqbFwbSoURYWCImd3apFtZi4Imu_rs",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/api/users/institutional/logout",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"institutional",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "buğra-ins",
+											"type": "text"
+										},
+										{
+											"key": "surname",
+											"value": "atik",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "bugra@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/radeonares/Pictures/wallpapers/wallpaper_2.jpg"
+										},
+										{
+											"key": "phone",
+											"value": "+905350000000",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "passwordRepeat",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "dateOfBirth",
+											"value": "20/03/2001",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "male",
+											"type": "text"
+										},
+										{
+											"key": "basket",
+											"value": "empty",
+											"type": "text"
+										},
+										{
+											"key": "order",
+											"value": "empty",
+											"type": "text"
+										},
+										{
+											"key": "creditCardName",
+											"value": "osman",
+											"type": "text"
+										},
+										{
+											"key": "creditCardSurname",
+											"value": "güleryılmaz",
+											"type": "text"
+										},
+										{
+											"key": "creditCardNumber",
+											"value": "5526080000000006",
+											"type": "text"
+										},
+										{
+											"key": "creditCardCvv",
+											"value": "322",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "Istanbul",
+											"type": "text"
+										},
+										{
+											"key": "country",
+											"value": "Turkey",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1",
+											"type": "text"
+										},
+										{
+											"key": "zipCode",
+											"value": "34732",
+											"type": "text"
+										},
+										{
+											"key": "identityNumber",
+											"value": "74300864791",
+											"type": "text"
+										},
+										{
+											"key": "expireMonth",
+											"value": "12",
+											"type": "text"
+										},
+										{
+											"key": "expireYear",
+											"value": "2030",
+											"type": "text"
+										},
+										{
+											"key": "companyName",
+											"value": "ins-company",
+											"type": "text"
+										},
+										{
+											"key": "position",
+											"value": "ins-pos",
+											"type": "text"
+										},
+										{
+											"key": "activityField",
+											"value": "ins-act",
+											"type": "text"
+										},
+										{
+											"key": "businessType",
+											"value": "ins-buss",
+											"type": "text"
+										},
+										{
+											"key": "taxOffice",
+											"value": "ins-tax",
+											"type": "text"
+										},
+										{
+											"key": "companyAddress",
+											"value": "ins-com-address",
+											"type": "text"
+										},
+										{
+											"key": "district",
+											"value": "ins-dis",
+											"type": "text"
+										},
+										{
+											"key": "service",
+											"value": "ins-ser",
+											"type": "text"
+										},
+										{
+											"key": "identity",
+											"value": "11111111111",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3000/api/users/institutional/create",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"institutional",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sign",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"bugra@gmail.com\",\n    \"password\":\"123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/users/institutional/sign",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"institutional",
+										"sign"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "basket",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"ad93952e-35b4-4504-bb77-5a47fcc2f435\",\n    \"basket\":[\n        {\n        \"id\":\"1\",\n        \"name\":\"urun1\",\n        \"category1\":\"kiyafet\",\n        \"price\":200\n    },\n     {\n        \"id\":\"2\",\n        \"name\":\"urun2\",\n        \"category1\":\"kiyafet\",\n        \"price\":200\n    }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/users/institutional/basket",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"institutional",
+										"basket"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "order",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"ea7cd52a-6dec-4947-86ba-d9411df68755\",\n  \"order\": [\n    {\n      \"id\": \"1\",\n      \"productName\": \"urun1\",\n      \"productQuantity\": 3,\n      \"productPrice\": 600\n    },\n    {\n      \"id\": \"2\",\n      \"productName\": \"urun2\",\n      \"productQuantity\": 3,\n      \"productPrice\": 100\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/users/institutional/order",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"institutional",
+										"order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "payment",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"ad93952e-35b4-4504-bb77-5a47fcc2f435\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/users/institutional/payment",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"institutional",
+										"payment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "4eb8fd57-bc70-4cc1-8920-5ebdd20ac66f",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "bugra-test",
+											"type": "text"
+										},
+										{
+											"key": "surname",
+											"value": "atik",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "bugra@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/radeonares/Pictures/wallpapers/wallpaper_3.jpg"
+										},
+										{
+											"key": "phone",
+											"value": "5524566545",
+											"type": "text"
+										},
+										{
+											"key": "oldPassword",
+											"value": "1234",
+											"type": "text"
+										},
+										{
+											"key": "newPassword",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "dateOfBirth",
+											"value": "20/03/2001",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "male",
+											"type": "text"
+										},
+										{
+											"key": "basket",
+											"value": "empty",
+											"type": "text"
+										},
+										{
+											"key": "order",
+											"value": "empty",
+											"type": "text"
+										},
+										{
+											"key": "creditCardName",
+											"value": "bugra-test",
+											"type": "text"
+										},
+										{
+											"key": "creditCardSurname",
+											"value": "atik",
+											"type": "text"
+										},
+										{
+											"key": "creditCardNumber",
+											"value": "123123214321412",
+											"type": "text"
+										},
+										{
+											"key": "creditCardCvv",
+											"value": "322",
+											"type": "text"
+										},
+										{
+											"key": "hash",
+											"value": "$2b$08$7o4pSBaaSpQXufEfIcj5MeR6MaE37dss5X44yTwvut9C8G1n6WbxC",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "Istanbul",
+											"type": "text"
+										},
+										{
+											"key": "country",
+											"value": "Turkey",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1",
+											"type": "text"
+										},
+										{
+											"key": "zipCode",
+											"value": "34732",
+											"type": "text"
+										},
+										{
+											"key": "identityNumber",
+											"value": "123132",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3000/api/users/institutional/update",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"institutional",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"0b519106-9879-4962-898b-f24e7a9564f2\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/users/institutional/delete",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"institutional",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "OpenEdu",
+			"item": [
+				{
+					"name": "Main",
+					"item": [
+						{
+							"name": "findAll",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/api/main",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"main"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "find",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/main/id",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"main",
+										"id"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "icon",
+											"type": "file",
+											"src": "/home/radeonares/Pictures/wallpapers/wallpaper_3.jpg"
+										},
+										{
+											"key": "context",
+											"value": "okey",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3000/api/main",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"main"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "6405136aa759e77df8e748fe",
+											"type": "text"
+										},
+										{
+											"key": "icon",
+											"type": "file",
+											"src": "/home/radeonares/Pictures/wallpapers/wallpaper_5.jpg"
+										},
+										{
+											"key": "context",
+											"value": "tamam",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3000/api/main",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"main"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"6405136aa759e77df8e748fe\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/main",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"main"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Academy",
+					"item": [
+						{
+							"name": "findAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/academy",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"academy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "find",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/academy/id",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"academy",
+										"id"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "icon",
+											"type": "file",
+											"src": "/home/radeonares/Pictures/wallpapers/wallpaper_4.jpg"
+										},
+										{
+											"key": "context",
+											"value": "tamadir brasdas",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3000/api/academy",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"academy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "icon",
+											"type": "file",
+											"src": "/home/radeonares/Pictures/wallpapers/wallpaper_3.jpg"
+										},
+										{
+											"key": "context",
+											"value": "tamadir",
+											"type": "text"
+										},
+										{
+											"key": "id",
+											"value": "64051cf5d8db01db07f5f674",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3000/api/academy",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"academy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"64051cf5d8db01db07f5f674\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/academy",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"academy"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "findAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/openEdu/category",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"openEdu",
+										"category"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "find",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/openEdu/category/id",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"openEdu",
+										"category",
+										"id"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"etkinlik\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/openEdu/category/create",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"openEdu",
+										"category",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"64051f0e4596f0b95c62e3cc\",\n    \"title\":\"etkinlik1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/openEdu/category/update",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"openEdu",
+										"category",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"64051f0e4596f0b95c62e3cc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/openEdu/category/delete",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"openEdu",
+										"category",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/openEdu/openEdu",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"openEdu",
+								"openEdu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/openEdu/openEdu/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"openEdu",
+								"openEdu",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Deneyimsel Öğrenme: Öğrenmeyi Öğrenpğme",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Deneyimsel Öğrenme, yaşantısal tecrübe ve bilginin elde edilebileceği en etkili öğrenme biçimidir. Öğrenmeyi öğrenmek için ilk önce deneyimlemeniz gerekmektedir.",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_5.jpg"
+								},
+								{
+									"key": "html",
+									"value": "<div>Blog Detay </div>",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2022-04-30T00:00:00.000Z",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "6405265c8e59d11aa3013976",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/openEdu/openEdu/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"openEdu",
+								"openEdu",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Deneyimsel Öğrenme, yaşantısal tecrübe ve bilginin elde edilebileceği en etkili öğrenme biçimidir. Öğrenmeyi öğrenmek için ilk önce deneyimlemeniz gerekmektedir.",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_3.jpg"
+								},
+								{
+									"key": "html",
+									"value": "<div>Blog Detay </div>",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2022-04-30T00:00:00.000Z",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "6405265c8e59d11aa3013976",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "640526798e59d11aa301397a",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/openEdu/openEdu/update",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"openEdu",
+								"openEdu",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"640526798e59d11aa301397a\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/openEdu/openEdu/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"openEdu",
+								"openEdu",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BlogMain",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/blogMain",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"blogMain"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/blogMain/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"blogMain",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_4.jpg"
+								},
+								{
+									"key": "icon",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_5.jpg"
+								},
+								{
+									"key": "html",
+									"value": "6d43745f64ac0676a22f14573c4e87874c95eabde16e976163448f4bd6060ba1ab36eb6031a50c438af017c18fed245b7ffedc33bdabdddf50dde747d906f55bab52a4f3b55839a931285b3ba00348183acdc755e19afb4a22bea92416884eadeb772fb0fc32d2a712b00460dec20b67c7d4b6cf504280b1e5c21ffbeab7c9ab5f158b6a4950aa0d49087a319057",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "deneme100",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "deneme_description1",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "deneme2",
+									"type": "text"
+								},
+								{
+									"key": "pageImage",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_4.jpg"
+								},
+								{
+									"key": "questions",
+									"value": "e106293a279408d374460b588dbbfdbb5688df7573d1c318e39a47233bcd8207ffbf805d5d00ad9082f287eaeeb268c398058f993862268231194c747ef17ed70bb9878aa6f3dbd1d3d7d61cf916d5f39a324e6d0c820779c3492a5a8b96c92f602b42006cc6eebf75bfd723d719cecca25fbaa9f80da3f041da16183942dfa3d2ad8230291abd13d59deee6fc3c500e19d8f34257ab5e72f50d272874fc208d04ce62f630de0d",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/blogMain/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"blogMain",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_4.jpg"
+								},
+								{
+									"key": "icon",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_4.jpg"
+								},
+								{
+									"key": "html",
+									"value": "6d43745f64ac0676a22f14573c4e87874c95eabde16e976163448f4bd6060ba1ab36eb6031a50c438af017c18fed245b7ffedc33bdabdddf50dde747d906f55bab52a4f3b55839a931285b3ba00348183acdc755e19afb4a22bea92416884eadeb772fb0fc32d2a712b00460dec20b67c7d4b6cf504280b1e5c21ffbeab7c9ab5f158b6a4950aa0d49087a319057",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "deneme",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "deneme_description1",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "deneme2",
+									"type": "text"
+								},
+								{
+									"key": "pageImage",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_5.jpg"
+								},
+								{
+									"key": "questions",
+									"value": "e106293a279408d374460b588dbbfdbb5688df7573d1c318e39a47233bcd8207ffbf805d5d00ad9082f287eaeeb268c398058f993862268231194c747ef17ed70bb9878aa6f3dbd1d3d7d61cf916d5f39a324e6d0c820779c3492a5a8b96c92f602b42006cc6eebf75bfd723d719cecca25fbaa9f80da3f041da16183942dfa3d2ad8230291abd13d59deee6fc3c500e19d8f34257ab5e72f50d272874fc208d04ce62f630de0d",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "64052c80beaa334afb190d68",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/blogMain/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"blogMain",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"64052c80beaa334afb190d68\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/blogMain/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"blogMain",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Blog",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/blog",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"blog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/blog/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"blog",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_3.jpg"
+								},
+								{
+									"key": "icon",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_5.jpg"
+								},
+								{
+									"key": "html",
+									"value": "6d43745f64ac0676a22f14573c4e87874c95eabde16e976163448f4bd6060ba1ab36eb6031a50c438af017c18fed245b7ffedc33bdabdddf50dde747d906f55bab52a4f3b55839a931285b3ba00348183acdc755e19afb4a22bea92416884eadeb772fb0fc32d2a712b00460dec20b67c7d4b6cf504280b1e5c21ffbeab7c9ab5f158b6a4950aa0d49087a319057",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "deneme100",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "deneme_description1",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "deneme3",
+									"type": "text"
+								},
+								{
+									"key": "questions",
+									"value": "e106293a279408d374460b588dbbfdbb5688df7573d1c318e39a47233bcd8207ffbf805d5d00ad9082f287eaeeb268c398058f993862268231194c747ef17ed70bb9878aa6f3dbd1d3d7d61cf916d5f39a324e6d0c820779c3492a5a8b96c92f602b42006cc6eebf75bfd723d719cecca25fbaa9f80da3f041da16183942dfa3d2ad8230291abd13d59deee6fc3c500e19d8f34257ab5e72f50d272874fc208d04ce62f630de0d",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/blog/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"blog",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_4.jpg"
+								},
+								{
+									"key": "icon",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_2.jpg"
+								},
+								{
+									"key": "html",
+									"value": "6d43745f64ac0676a22f14573c4e87874c95eabde16e976163448f4bd6060ba1ab36eb6031a50c438af017c18fed245b7ffedc33bdabdddf50dde747d906f55bab52a4f3b55839a931285b3ba00348183acdc755e19afb4a22bea92416884eadeb772fb0fc32d2a712b00460dec20b67c7d4b6cf504280b1e5c21ffbeab7c9ab5f158b6a4950aa0d49087a319057",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "deneme100",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "deneme_description1",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "deneme1000",
+									"type": "text"
+								},
+								{
+									"key": "questions",
+									"value": "e106293a279408d374460b588dbbfdbb5688df7573d1c318e39a47233bcd8207ffbf805d5d00ad9082f287eaeeb268c398058f993862268231194c747ef17ed70bb9878aa6f3dbd1d3d7d61cf916d5f39a324e6d0c820779c3492a5a8b96c92f602b42006cc6eebf75bfd723d719cecca25fbaa9f80da3f041da16183942dfa3d2ad8230291abd13d59deee6fc3c500e19d8f34257ab5e72f50d272874fc208d04ce62f630de0d",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "640530c6d71fdbd15df022aa",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/blog/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"blog",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"640530c6d71fdbd15df022aa\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/blog/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"blog",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ContactForm",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/contactForm",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"contactForm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/contactForm/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"contactForm",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Eness\",\n    \"surname\": \"Balay\",\n    \"email\": \"enes@mail.com\",\n    \"companyName\": \"Mutluluk Ofisi\",\n    \"message\": \"Merhaba Ben Enes Deneme Yaptıma\",\n    \"type\":1,\n    \"isAccept\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/contactForm",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"contactForm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"640537607317cda21989db8e\",\n    \"name\": \"Eness\",\n    \"surname\": \"Balay\",\n    \"email\": \"enes@mail.com\",\n    \"companyName\": \"Mutluluk Ofisi\",\n    \"message\": \"Merhaba Ben Enes Deneme Yaptıma\",\n    \"type\":1,\n    \"isAccept\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/contactForm",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"contactForm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"640537607317cda21989db8e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/contactForm",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"contactForm"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DiscoveredUs",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/discoveredUs",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"discoveredUs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/discoveredUs/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"discoveredUs",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"address\": \" <span>İdealtepe Mahallesi, Dik Sokak No 13 Kat 2 34841</span><br /><span>Maltepe, İstanbul / Türkiye</span>\",\n        \"email\": \"merhaba@mutlulukofisi.com\",\n        \"phone\": \"(+90) 533 558 17 53\",\n        \"instagram\": \"https://www.instagram.com/mutlulukofisi/\",\n        \"facebook\": \"https://www.facebook.com/mutlulukofisi/?fref=ts\",\n        \"linkedin\": \"https://www.linkedin.com/company/mutlulukofisi/\",\n        \"mapLink\": \"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48181.141383779766!2d29.165134487767435!3d40.99633943292086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cad3fe9f071605%3A0x2a72c86e52cdb587!2sMutluluk%20Ofisi!5e0!3m2!1str!2str!4v1593534460746!5m2!1str!2str\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/discoveredUs",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"discoveredUs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"64053c90e43994184f111dc1\",\n        \"address\": \" asd\",\n        \"email\": \"merhaba@mutlulukofisi.com\",\n        \"phone\": \"(+90) 533 558 17 53\",\n        \"instagram\": \"https://www.instagram.com/mutlulukofisi/\",\n        \"facebook\": \"https://www.facebook.com/mutlulukofisi/?fref=ts\",\n        \"linkedin\": \"https://www.linkedin.com/company/mutlulukofisi/\",\n        \"mapLink\": \"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48181.141383779766!2d29.165134487767435!3d40.99633943292086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cad3fe9f071605%3A0x2a72c86e52cdb587!2sMutluluk%20Ofisi!5e0!3m2!1str!2str!4v1593534460746!5m2!1str!2str\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/discoveredUs",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"discoveredUs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"64053c90e43994184f111dc1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/discoveredUs",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"discoveredUs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notification",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/notification",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"notification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/notification/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"notification",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"chat\",\n    \"context\":\"size mesaj gonderdi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/notification",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"notification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"6405de971f10cd6889792767\",\n    \"title\":\"chat1\",\n    \"context\":\"size mesaj gonderdi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/notification",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"notification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"6405de971f10cd6889792767\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/notification",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"notification"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ourCollabrotion",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/ourCollabrotion",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ourCollabrotion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/ourCollabrotion/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ourCollabrotion",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "link",
+									"value": "link",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_4.jpg"
+								},
+								{
+									"key": "text",
+									"value": "text",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "title",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/ourCollabrotion",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ourCollabrotion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "link",
+									"value": "link1",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_4.jpg"
+								},
+								{
+									"key": "text",
+									"value": "text1",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "title1",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "6405e6336fbafe45ffbe016b",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/ourCollabrotion",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ourCollabrotion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"6405e6336fbafe45ffbe016b\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/ourCollabrotion",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ourCollabrotion"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ourService",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/ourService",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ourService"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/ourService/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ourService",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"link\": \"/proje-ve-danismanlik\",\n        \"text\": \"Project Happiness, Happiness Talks ve Co Buddy! Danışmanlık hizmetlerimiz ile ilgili ihtiyaç ve talepleriniz için lütfen bize ulaşınız.\",\n        \"title\": \"Danışmanlık Hizmetlerimiz\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/ourService",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ourService"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n     \"id\":\"6405eb1dcaabd31ab10aceaa\",\n        \"link\": \"/proje-ve-danismanlik\",\n        \"text\": \"Project Happiness, Happiness Talks ve Co Buddy! Danışmanlık hizmetlerimiz ile ilgili ihtiyaç ve talepleriniz için lütfen bize ulaşınız.\",\n        \"title\": \"Derimiz\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/ourService",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ourService"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"6405eb1dcaabd31ab10aceaa\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/ourService",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ourService"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Privacy",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/privacy",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"privacy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/privacy/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"privacy",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n       \"title\": \"Danışmanlık Hizmetlerimiz\",\n        \"context\": \"Project Happiness, Happiness Talks ve Co Buddy! Danışmanlık hizmetlerimiz ile ilgili ihtiyaç ve talepleriniz için lütfen bize ulaşınız.\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/privacy",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"privacy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n       \"title\": \"Danışmanlık Hizmetlerimiz\",\n        \"context\": \"sa.\",\n        \"id\":\"6405f22160716372ca666a03\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/privacy",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"privacy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"6405f22160716372ca666a03\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/privacy",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"privacy"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Slide",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/slide",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"slide"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/slide/id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"slide",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "header",
+									"value": "header",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_4.jpg"
+								},
+								{
+									"key": "text",
+									"value": "text",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/slide",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"slide"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "header",
+									"value": "header1",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/radeonares/Pictures/wallpapers/wallpaper_3.jpg"
+								},
+								{
+									"key": "text",
+									"value": "text1",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "6405f61584460a660af06976",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/slide",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"slide"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"6405f61584460a660af06976\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/slide",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"slide"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
